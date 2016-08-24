@@ -1,14 +1,12 @@
-// Alguem cola ai vlw flws (precisava de pelo menos 1 arquivo na pasta pro Git funfar)
-// pere
-// os exercicio tá bem simples, se quiserem deixar ele mais denso, sempre é bom né guys?
 #include <stdio.h>
 #include <conio.h>
+#include <locale.h>
 
 
-//Vitor de França
 
-main() {
-	
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
 	int ladoA, area;
 	
 	printf("Digite o lado do quadrado\n: ");
@@ -16,7 +14,9 @@ main() {
 	
 	area = ladoA * ladoA;
 	
-	printf("A area do quadrado equivale a: %i", area);
+	printf("A �rea do quadrado equivale a: %i", area);
 	
 	getch();
+	
+	return 0;
 }

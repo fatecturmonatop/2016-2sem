@@ -1,4 +1,4 @@
-// 1 – 2/4 + 3/9 – 4/16 + 5/25 + ... + 15/225
+// 1 + 2/3 + 3/5 + ... + 50/99
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -8,21 +8,20 @@
 int main()
 {
 	setlocale(LC_ALL, "Portuguese");
-	
-	unsigned char t;
-	char m;
+
+	unsigned char t, u;
 	double f;
-	
-	m = 1;
+
 	t = 1;
+	u = 1;
 	f = 0.0;
-	
-	for(t = 1; t <= 15; t++)
+
+	for(t = 1; t <= 50; t++)
 	{
-		f += (m) * ((double)t/(double)(t*t));
-		m *= -1;
+		f += ((double)t/(double)(u));
+		u += 2;
 	}
-	
+
 	printf("%lf\n", f);
 	getch();
 	return 0;
